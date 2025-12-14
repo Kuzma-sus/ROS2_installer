@@ -23,12 +23,17 @@ sudo apt install ros-jazzy-ros-base -y
 echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
-# --- 5. Установка инструментов сборки Python ---
+# --- 5. Создание виртуального окружения Python ---
+sudo apt install python3 -y
+sudo apt install python3.12-venv -y
+python3 -m venv ros2
+source ros2/bin/activate -y
+
+# --- 6. Установка инструментов сборки Python ---
 sudo apt install python3-pip -y
 pip3 install setuptools --break-system-packages
 sudo apt install python3-colcon-common-extensions -y
 
-# --- 6. Проверка ---
+# --- 7. Проверка ---
 echo "Переменная ROS_DISTRO:"
 echo $ROS_DISTRO
-
