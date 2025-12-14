@@ -27,7 +27,7 @@ source ~/.bashrc
 sudo apt install python3 -y
 sudo apt install python3.12-venv -y
 python3 -m venv ros2
-source ros2/bin/activate -y
+source ros2/bin/activate 
 
 # --- 6. Установка инструментов сборки Python ---
 sudo apt install python3-pip -y
